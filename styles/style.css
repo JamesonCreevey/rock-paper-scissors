@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/*Center everything in the middle of the screen and basic game board styling*/
 .game {
   display: flex;
   align-items: center;
@@ -15,3 +16,87 @@
   color: rgb(224, 224, 224);
 }
 
+/*Title of the game*/
+.title {
+  position: absolute;
+  top: 5%;
+  font-size: 4rem;
+  z-index: 2;
+}
+
+/*Score board styling*/
+.score {
+  display: flex;
+  width: 30vw;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 150px;
+  z-index: 1;
+}
+
+.p-count,
+.c-count {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/*Options buttons*/
+.options {
+  display: flex;
+  width: 50vw;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.options button {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 3px;
+  color: rgb(224,224,224);
+  background-color: rgb(58, 86, 109);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.options button:hover {
+  background-color: rgba(58,86,109,0.6);
+}
+
+.options button:active {
+  transform: scale(0.98);
+}
+
+.move {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*Reload button design*/
+.reload {
+  display: none;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgb(63, 206, 82);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgb(224,224,224);
+}
+
+/*@media styles for responsive design*/
+@media screen and(max-width: 612px) {
+  .title {
+    text-align: center;
+  }
+
+  .score {
+    position: absolute;
+    top: 200px;
+    width: 100vw;
+  }
+
+  .options {
+    width: 100vw;
+  }
+}
